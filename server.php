@@ -24,7 +24,7 @@
 // ];
 
 
-if(isset($_POST['newTodo'])) {
+if (isset($_POST['newTodo'])) {
     //prende il contenuto del file json
     $jsonTodos = file_get_contents('todos.json');
     //modifica il file json in array php
@@ -42,14 +42,13 @@ if(isset($_POST['newTodo'])) {
 } else {
 
     $jsonTodos = file_get_contents('todos.json');
-    
+
     $todos = json_decode($jsonTodos);
-    
+
     // array_splice($todos, 2, 2);
-    
+
     // header('Content-type: application/json');
-    
+
     // l'echo dell'encode SERVE SEMPRE
     echo json_encode($todos);
 }
-

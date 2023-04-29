@@ -28,7 +28,6 @@ createApp({
             
             axios.post('./server.php', data, { headers: { 'Content-Type': 'multipart/form-data' } }).then((response) => {
                 
-                console.log("chiamata post effettuata", response);
                 
                 this.getTodos();
             });
